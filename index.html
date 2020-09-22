@@ -5,7 +5,7 @@
 </head>
 <script language="javascript">
 function copyCmd(){
- var demo = "cd /alidata/www\ngit clean -d -f\ngit checkout -b master origin/master\ngit checkout master\ngit clean -d -f\ngit pull\ngit branch -D app/xxxxxx\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit clean -d -f\ngit pull\n";
+ var demo = "cd /alidata/www\ngit clean -d -f\ngit checkout -b master origin/master\ngit checkout master\ngit clean -d -f\ngit pull\ngit branch -D app/xxxxxx\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit clean -d -f\ngit pull\n\n";
  var branch = document.getElementById("branch").value.replace('origin/', '');
  var cmd = demo.replace(/xxxxxx/g, branch);
 
@@ -26,11 +26,12 @@ function copyCmd(){
 	<br>
 <textarea style="width: 400px;height: 180px;font-size: 15px;line-height: 25px; color: #555;border-color: #FFF" >
 操作步骤：
- 1. 拷贝命令
- 2. 后去跳板机后台
- 3. 点击左侧菜单：Web终端
- 4. 左侧列表找到自己的服务器点开
- 5. 粘贴命令等待执行完毕
+ 1. 输入分支名
+ 2. 拷贝命令
+ 3. 去跳板机后台
+ 4. 点击左侧菜单：Web终端
+ 5. 左侧列表找到自己的服务器点开
+ 6. 粘贴命令等待执行完毕
 </textarea>
 	<br>
 <textarea id="cmd" style="width: 400px;height: 300px;font-size: 15px;line-height: 25px; color: #555;border-color: #FFF" ></textarea>
