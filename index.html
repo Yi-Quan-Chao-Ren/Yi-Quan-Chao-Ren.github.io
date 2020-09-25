@@ -5,7 +5,7 @@
 </head>
 <script language="javascript">
 function copyCmd(){
- var demo = "cd /alidata/www\ngit clean -d -f\ngit checkout -b master origin/master\ngit checkout master\ngit clean -d -f\ngit pull\ngit branch -D app/xxxxxx\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit clean -d -f\ngit pull\n\n";
+ var demo = "cd /alidata/www\ngit clean -d -f\ngit reset HEAD .\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit clean -d -f\ngit reset HEAD .\ngit pull\n\n";
  var branch = document.getElementById("branch").value.replace('origin/', '');
  var cmd = demo.replace(/xxxxxx/g, branch);
 
