@@ -5,7 +5,7 @@
 </head>
 <script language="javascript">
 function copyCmd(){
- var demo = "cd /alidata/www\ngit config --global user.email '1@1.com'\ngit config --global user.name 'app'\ngit add -A --all\ngit stash\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit pull\ngit stash pop\ngit branch\ngit pull\n\n";
+ var demo = "cd /alidata/www\ngit config --global user.email '1@1.com'\ngit config --global user.name 'app'\ngit add -A --all\ngit stash\ngit pull\ngit checkout -b app/xxxxxx origin/xxxxxx\ngit checkout app/xxxxxx\ngit pull\ngit stash pop\ngit branch\ngit pull\n\n";
  var branch = document.getElementById("branch").value.replace('origin/', '');
  var cmd = demo.replace(/xxxxxx/g, branch);
 
@@ -34,6 +34,6 @@ function copyCmd(){
  6. 粘贴命令等待执行完毕
 </textarea>
 	<br>
-<textarea id="cmd" style="width: 400px;height: 300px;font-size: 15px;line-height: 25px; color: #555;border-color: #FFF" ></textarea>
+<textarea id="cmd" style="width: 400px;height: 400px;font-size: 15px;line-height: 25px; color: #555;border-color: #FFF" ></textarea>
 </body>
 </html>
